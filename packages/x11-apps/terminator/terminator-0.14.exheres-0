@@ -9,7 +9,7 @@ DOWNLOADS="http://launchpad.net/${PN}/trunk/${PV}/+download/${PN}_${PV}.tar.gz"
 SLOT="0"
 PLATFORMS="~amd64 ~x86"
 MYOPTIONS=""
-WORK="${WORKBASE}/${PV}"
+#WORK="${WORKBASE}/${PV}"
 
 DEPENDENCIES="
     build+run:
