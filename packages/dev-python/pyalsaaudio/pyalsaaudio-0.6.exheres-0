@@ -1,0 +1,19 @@
+# Distributed under the terms of the GNU General Public License v2
+
+require distutils
+
+SUMMARY="A Python wrapper for the ALSA API"
+HOMEPAGE="http://www.sourceforge.net/projects/pyalsaaudio http://pypi.python.org/pypi/pyalsaaudio"
+DOWNLOADS="mirror://sourceforge/pyalsaaudio/${PNV}.tar.gz http://pypi.python.org/packages/source/${PN:0:1}/${PN}/${PNV}.tar.gz"
+
+LICENCES="PSF-2.4"
+SLOT="0"
+PLATFORMS="~amd64 ~x86"
+MYOPTIONS="doc"
+
+DEPENDENCIES="
+    build+run:
+        sys-sound/alsa-lib
+    build:
+        doc? ( dev-python/sphinx[>=0.6] )"
+

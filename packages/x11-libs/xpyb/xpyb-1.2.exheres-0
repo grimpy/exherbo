@@ -1,0 +1,17 @@
+# Distributed under the terms of the GNU General Public License v2
+
+DOWNLOADS="http://xcb.freedesktop.org/dist/${PNV}.tar.bz2"
+SUMMARY="XCB-based Python bindings for the X Window System"
+HOMEPAGE="http://xcb.freedesktop.org/"
+
+PLATFORMS="~amd64 ~x86"
+
+DEPENDENCIES="
+    build:
+        x11-libs/libxcb[>=1.1]
+        dev-lang/python[>=2.5]
+    build+run:
+        x11-proto/xcb-proto[>=1.2]
+"
+
+

@@ -1,0 +1,12 @@
+# Distributed under the terms of the GNU General Public License v2
+
+require perl-module [ module_author=EXIFTOOL ]
+MY_PN=Image-ExifTool
+MY_P=${MY_PN}-${PV}
+WORK=${WORKBASE}/${MY_P}
+SUMMARY="Read and write meta information in image, audio and video files"
+DOWNLOADS="http://www.sno.phy.queensu.ca/~phil/exiftool/${MY_P}.tar.gz"
+
+SLOT="0"
+PLATFORMS="~amd64 ~x86"
+MYOPTIONS=""

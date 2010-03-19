@@ -1,0 +1,25 @@
+# Copyright 1999-2010 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gdata/gdata-2.0.9.ebuild,v 1.1 2010/03/12 17:12:17 arfrever Exp $
+
+require distutils
+
+MY_P="gdata-${PV}"
+
+SUMMARY="Python client library for Google data APIs"
+HOMEPAGE="http://code.google.com/p/gdata-python-client/ http://pypi.python.org/pypi/gdata"
+DOWNLOADS="http://gdata-python-client.googlecode.com/files/${MY_P}.tar.gz"
+
+LICENCES="Apache-2.0"
+SLOT="0"
+PLATFORMS="~alpha ~amd64 ~x86"
+
+DEPENDENCIES="
+    run:
+        dev-lang/python[>=2.5]
+        dev-python/lxml
+"
+S="${WORKDIR}/${MY_P}"
+
+PYTHON_MODNAME="atom gdata"
+
