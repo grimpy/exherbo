@@ -1,0 +1,17 @@
+# Distributed under the terms of the GNU General Public License v2
+
+require distutils
+
+DESCRIPTION="Multiple GNOME terminals in one window."
+HOMEPAGE="http://www.tenshu.net/terminator/"
+DOWNLOADS="http://launchpad.net/${PN}/trunk/${PV}/+download/${PN}_${PV}.tar.gz"
+
+SLOT="0"
+PLATFORMS="~amd64 ~x86"
+MYOPTIONS=""
+#WORK="${WORKBASE}/${PV}"
+
+DEPENDENCIES="
+    build+run:
+        dev-libs/vte[>=0.16][python]
+"

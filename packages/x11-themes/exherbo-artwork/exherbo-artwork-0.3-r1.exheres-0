@@ -1,0 +1,47 @@
+# Copyright 2009 Sterling X. Winter <replica@exherbo.org>
+# Distributed under the terms of the GNU General Public License v2
+
+require python [ python_dep=2.6 has_lib=false has_bin=true ]
+
+SUMMARY="Batch-customizable Exherbo-themed artwork"
+DESCRIPTION="
+Exherbo-themed images in SVG format which, when processed with the included
+utility make-exherbo-art, are suitable for use as desktop wallpaper, display
+manager backgrounds, boot splashes, or GRUB menu splashes. The original SVG
+zebrapig logo is also provided for users who wish to create their own
+Exherbo-themed artwork.
+"
+HOMEPAGE="http://gitorious.org/${PN}/"
+DOWNLOADS="http://gitorious.org/${PN}/releases/blobs/raw/master/${PNV}.tar.bz2"
+
+LICENCES="
+    CCPL-Attribution-ShareAlike-3.0
+    MIT
+"
+SLOT="0"
+PLATFORMS="~amd64 ~x86"
+MYOPTIONS=""
+
+DEPENDENCIES="
+    run:
+        media-gfx/ImageMagick[png(+)]
+        media-gfx/svgmod
+"
+
+BUGS_TO="replica@exherbo.org"
+UPSTREAM_CHANGELOG="${HOMEPAGE}${PN}/commits/master/"
+UPSTREAM_DOCUMENTATION="${HOMEPAGE}pages/Home/ [[ lang = en ]]"
+
+DEFAULT_SRC_INSTALL_EXTRA_DOCS=( README.mkd )
+
+src_install() {
+    default
+    dobin make-exherbo-art
+
+    insinto /etc
+    doins exherbo-artwork.cfg
+
+    insinto /usr/share/exherbo-artwork
+    doins -r *.svg logo/
+}
+

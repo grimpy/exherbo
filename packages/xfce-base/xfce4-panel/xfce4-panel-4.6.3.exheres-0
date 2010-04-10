@@ -1,0 +1,38 @@
+# Copyright 2008, 2009 Ingmar Vanhassel <ingmar@exherbo.org>
+# Distributed under the terms of the GNU General Public License v2
+# Based in part upon 'xfce4-panel-4.4.2.ebuild' from Gentoo, which is:
+#     Copyright 1999-2008 Gentoo Foundation.
+
+require xfce
+
+SUMMARY="XFCE Panel"
+HOMEPAGE="http://www.xfce.org/projects/${PN}/"
+
+SLOT="0"
+PLATFORMS="~amd64 ~x86"
+MYOPTIONS="debug doc startup-notification"
+
+DEPENDENCIES="
+    build:
+        doc? ( dev-doc/gtk-doc )
+    build+run:
+        dev-libs/glib:2[>=2.12.0]
+        gnome-desktop/librsvg:2
+        x11-libs/cairo[>=1.0.0]
+        x11-libs/gtk+:2[>=2.10.0]
+        x11-libs/libX11
+        x11-libs/libSM
+        xfce-base/exo[>=0.3.100]
+        xfce-base/libxfce4util[>=4.6.0]
+        xfce-base/libxfcegui4[>=4.6.0]
+        gnome-desktop/libwnck:1[>=2.20]
+        startup-notification? ( x11-libs/startup-notification )
+"
+
+DEFAULT_SRC_CONFIGURE_PARAMS=(--enable-dummy-scripts )
+DEFAULT_SRC_CONFIGURE_OPTION_ENABLES=(
+    debug
+    "doc gtk-doc"
+    startup-notification
+)
+

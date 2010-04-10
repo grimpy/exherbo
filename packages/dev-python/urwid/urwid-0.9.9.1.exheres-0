@@ -1,0 +1,12 @@
+# Distributed under the terms of the GNU General Public License v2
+
+require distutils
+
+SUMMARY="Urwid is a curses-based user interface library for Python."
+HOMEPAGE="http://excess.org/urwid/ http://pypi.python.org/pypi/urwid"
+DOWNLOADS="http://excess.org/urwid/${PNV}.tar.gz"
+
+LICENCES="LGPL-2.1"
+SLOT="0"
+PLATFORMS="~amd64 ~x86"
+
