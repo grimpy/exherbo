@@ -1,7 +1,7 @@
 DESCRIPTION="A lightweight GTK+ based clipboard manager."
 HOMEPAGE="http://parcellite.sourceforge.net/"
 DOWNLOADS="mirror://sourceforge/${PN}/${PNV}.tar.gz"
-LICENSE="GPL-3"
+LICENSES="GPL-3"
 SLOT="0"
 PLATFORMS="~amd64 ~x86"
 MYOPTIONS="nls"
